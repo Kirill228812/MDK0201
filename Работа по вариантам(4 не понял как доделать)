@@ -1,0 +1,91 @@
+1. ubuntu 
+docker run -it a04dc4851cbc
+root@bc70eef7860b:/# cal
+bash: cal: command not found
+root@bc70eef7860b:/# date
+Fri Mar 28 07:44:59 UTC 2025
+root@bc70eef7860b:/# df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         25106692 18652152   5153856  79% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        0     65536   0% /dev/shm
+/dev/sda3       25106692 18652152   5153856  79% /etc/hosts
+tmpfs            1007928        0   1007928   0% /proc/asound
+tmpfs            1007928        0   1007928   0% /proc/acpi
+tmpfs            1007928        0   1007928   0% /proc/scsi
+tmpfs            1007928        0   1007928   0% /sys/firmware
+tmpfs            1007928        0   1007928   0% /sys/devices/virtual/powercap
+# free
+               total        used        free      shared  buff/cache   available
+Mem:         2015860      855924      142060       16288     1206616     1159936
+Swap:        2744316      334376     2409940
+root@bc70eef7860b:/# ^C
+root@bc70eef7860b:/# exit
+exit
+2. rockylinux 
+docker run -it 9cc24f05f309
+[root@260fe5564aaa /]# free
+bash: free: command not found
+[root@260fe5564aaa /]# cal
+     March 2025     
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31               
+[root@260fe5564aaa /]# df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         25106692 19049000   4757008  81% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        0     65536   0% /dev/shm
+/dev/sda3       25106692 19049000   4757008  81% /etc/hosts
+tmpfs            1007928        0   1007928   0% /proc/asound
+tmpfs            1007928        0   1007928   0% /proc/acpi
+tmpfs            1007928        0   1007928   0% /proc/scsi
+tmpfs            1007928        0   1007928   0% /sys/firmware
+tmpfs            1007928        0   1007928   0% /sys/devices/virtual/powercap
+[root@260fe5564aaa /]# exit
+3. apache
+docker run -it aded1e1a5b37
+/ # cal
+     March 2025
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+/ # free
+              total        used        free      shared  buff/cache   available
+Mem:        2015860     1419920       85228       82352      510712      339976
+Swap:       2744316      851444     1892872
+/ # df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+overlay               25106692  19080740   4725268  80% /
+tmpfs                    65536         0     65536   0% /dev
+shm                      65536         0     65536   0% /dev/shm
+/dev/sda3             25106692  19080740   4725268  80% /etc/resolv.conf
+/dev/sda3             25106692  19080740   4725268  80% /etc/hostname
+/dev/sda3             25106692  19080740   4725268  80% /etc/hosts
+tmpfs                  1007928         0   1007928   0% /proc/asound
+tmpfs                  1007928         0   1007928   0% /proc/acpi
+tmpfs                    65536         0     65536   0% /proc/interrupts
+tmpfs                    65536         0     65536   0% /proc/kcore
+tmpfs                    65536         0     65536   0% /proc/keys
+tmpfs                    65536         0     65536   0% /proc/latency_stats
+tmpfs                    65536         0     65536   0% /proc/timer_list
+tmpfs                  1007928         0   1007928   0% /proc/scsi
+tmpfs                  1007928         0   1007928   0% /sys/firmware
+tmpfs                  1007928         0   1007928   0% /sys/devices/virtual/powercap
+/ # exit
+4.wordpress
+docker run -it 52bb3e73152a
+WordPress not found in /var/www/html - copying now...
+Complete! WordPress has been successfully copied to /var/www/html
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.7. Set the 'ServerName' directive globally to suppress this message
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.7. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 28 09:02:53.314480 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) PHP/8.2.28 configured -- resuming normal operations
+[Fri Mar 28 09:02:53.316580 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
