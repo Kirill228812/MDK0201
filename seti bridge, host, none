@@ -1,0 +1,357 @@
+u08@u08-VirtualBox:~$ sudo apt update
+[sudo] пароль для u08: 
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]     
+Игн:3 https://dowmload.docker.com/linux/ubuntu jammy InRelease                 
+Пол:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]      
+Пол:5 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]   
+Пол:6 https://download.docker.com/linux/ubuntu jammy InRelease [48,8 kB]       
+Игн:3 https://dowmload.docker.com/linux/ubuntu jammy InRelease             
+Пол:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [785 kB]
+Пол:8 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [47,6 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2 466 kB]
+Пол:10 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [615 kB]
+Игн:3 https://dowmload.docker.com/linux/ubuntu jammy InRelease               
+Пол:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2 222 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [405 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [103 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [3 263 kB]
+Пол:15 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [342 kB]
+Пол:16 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [43,1 kB]
+Пол:17 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [3 145 kB]
+Пол:18 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [558 kB]
+Пол:19 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 DEP-11 Metadata [208 B]
+Пол:20 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [657 kB]
+Пол:21 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [972 kB]
+Пол:22 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [209 kB]
+Пол:23 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [125 kB]
+Пол:24 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 DEP-11 Metadata [208 B]
+Пол:25 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [579 kB]
+Пол:26 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 DEP-11 Metadata [212 B]
+Пол:27 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1 200 kB]
+Пол:28 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [764 kB]
+Пол:29 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [296 kB]
+Пол:30 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [359 kB]
+Пол:31 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Пол:32 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [7 080 B]
+Пол:33 http://ru.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 DEP-11 Metadata [216 B]
+Пол:34 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [22,9 kB]
+Пол:35 http://ru.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 DEP-11 Metadata [212 B]
+Получено 19,6 MB за 9с (2 139 kB/s)                                            
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 167 пакетов. Запустите «apt list --upgradable» для их показа.
+W: https://download.docker.com/linux/ubuntu/dists/jammy/InRelease: Ключ хранится в унаследованной связке ключей trusted.gpg (/etc/apt/trusted.gpg), подробности см. в разделе DEPRECATION в apt-key(8).
+W: Не удалось получить https://dowmload.docker.com/linux/ubuntu/dists/jammy/InRelease  Не удалось разрешить «dowmload.docker.com»
+W: Некоторые индексные файлы скачать не удалось. Они были проигнорированы, или вместо них были использованы старые версии.
+u08@u08-VirtualBox:~$ docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+af1fe956c319   bridge    bridge    local
+9c0d319eb3dc   host      host      local
+cdbc84319bb1   none      null      local
+u08@u08-VirtualBox:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:a7:69:79 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 85517sec preferred_lft 85517sec
+    inet6 fe80::9aca:5d50:b01f:2481/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:32:76:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.8.1/24 brd 192.168.8.255 scope global noprefixroute enp0s8
+       valid_lft forever preferred_lft forever
+    inet6 fe80::646b:60b8:1ddb:a9be/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether a2:f8:3b:a7:d5:db brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+u08@u08-VirtualBox:~$ cat /etc/resolv.conf
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run "resolvectl status" to see details about the uplink DNS servers
+# currently in use.
+#
+# Third party programs should typically not access this file directly, but only
+# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
+# different way, replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+
+nameserver 127.0.0.53
+options edns0 trust-ad
+search nkti.local
+u08@u08-VirtualBox:~$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	u08-VirtualBox
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+u08@u08-VirtualBox:~$ docker network create -d bridge my_bridge
+cae23568176fc101df58b1065bf1bd0298f805394846ac6af3afe9398dc4e568
+u08@u08-VirtualBox:~$ docker network ls
+NETWORK ID     NAME        DRIVER    SCOPE
+af1fe956c319   bridge      bridge    local
+9c0d319eb3dc   host        host      local
+cae23568176f   my_bridge   bridge    local
+cdbc84319bb1   none        null      local
+u08@u08-VirtualBox:~$ docker network inspect my_bridge
+[
+    {
+        "Name": "my_bridge",
+        "Id": "cae23568176fc101df58b1065bf1bd0298f805394846ac6af3afe9398dc4e568",
+        "Created": "2025-04-10T13:22:33.154757678+07:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+u08@u08-VirtualBox:~$ docker run -itd --net my_bridge --name cont1 --rm alpine
+b5338cd79ce31f71bb0e8562386ddadcb5411645f945dc97b13acdcbfa176b2f
+u08@u08-VirtualBox:~$ docker exec cont1 ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0@if6: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue state UP 
+    link/ether 1e:15:04:11:3f:57 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.2/16 brd 172.18.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+u08@u08-VirtualBox:~$ docker exec cont1 4 -c 192.168.40.62
+OCI runtime exec failed: exec failed: unable to start container process: exec: "4": executable file not found in $PATH: unknown
+u08@u08-VirtualBox:~$ docker exec cont1  -c 192.168.40.62
+OCI runtime exec failed: exec failed: unable to start container process: exec: "-c": executable file not found in $PATH: unknown
+u08@u08-VirtualBox:~$ docker exec cont1  -c 192.168.40.62
+OCI runtime exec failed: exec failed: unable to start container process: exec: "-c": executable file not found in $PATH: unknown
+u08@u08-VirtualBox:~$ docker exec cont1  -c 
+OCI runtime exec failed: exec failed: unable to start container process: exec: "-c": executable file not found in $PATH: unknown
+u08@u08-VirtualBox:~$ docker exec cont1 ping  -c 4 192.168.40.62
+PING 192.168.40.62 (192.168.40.62): 56 data bytes
+        
+--- 192.168.40.62 ping statistics ---
+4 packets transmitted, 0 packets received, 100% packet loss
+u08@u08-VirtualBox:~$ docker exec cont1 ping  -c 4 192.168.15.62
+PING 192.168.15.62 (192.168.15.62): 56 data bytes
+
+--- 192.168.15.62 ping statistics ---
+4 packets transmitted, 0 packets received, 100% packet loss
+u08@u08-VirtualBox:~$ docker network create -d bridge subnet 192.168.15.0/26 --getaway 192.168.0.1 my192_N1
+unknown flag: --getaway
+
+Usage:  docker network create [OPTIONS] NETWORK
+
+Run 'docker network create --help' for more information
+u08@u08-VirtualBox:~$ docker network create -d bridge subnet 192.168.15.0/26 --geteway 192.168.0.1 my192_N1
+unknown flag: --geteway
+
+Usage:  docker network create [OPTIONS] NETWORK
+
+Run 'docker network create --help' for more information
+u08@u08-VirtualBox:~$ docker network create -d bridge subnet 192.168.15.0/26 --gateway 192.168.0.1 my192_N1
+docker: 'docker network create' requires 1 argument
+
+Usage:  docker network create [OPTIONS] NETWORK
+
+Run 'docker network create --help' for more information
+u08@u08-VirtualBox:~$ docker network create -d bridge subnet 192.168.15.0/26 --gateway 192.168.15.1 my192_N1
+docker: 'docker network create' requires 1 argument
+
+Usage:  docker network create [OPTIONS] NETWORK
+
+Run 'docker network create --help' for more information
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.0/26 --gateway 192.168.15.1 my192_N1
+2c84348ff997f20f197267375273e80e20b5670f060794f60a384b625078e1cf
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.64/26 --gateway 192.168.15.65 my192_N1
+Error response from daemon: network with name my192_N1 already exists
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.0/26 --gateway 192.168.15.1 my192_N1
+Error response from daemon: network with name my192_N1 already exists
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.64/26 --gateway 192.168.15.65 my192_N1
+Error response from daemon: network with name my192_N1 already exists
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.63/26 --gateway 192.168.15.65 my192_N1
+no matching subnet for gateway 192.168.15.65
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.64/26 --gateway 192.168.15.65 my192_N1
+Error response from daemon: network with name my192_N1 already exists
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.62/26 --gateway 192.168.15.63 my192_N1
+Error response from daemon: invalid network config:
+invalid subnet 192.168.15.62/26: it should be 192.168.15.0/26
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.64/26 --gateway 192.168.15.65 my192_N2
+f8768b7f5242c3b370dcac7b8d35ed4bef9b4463318a38fa42fa323ced8f8084
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.64/26 --gateway 192.168.15.65 my192_N2
+Error response from daemon: network with name my192_N2 already exists
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.128/26 --gateway 192.168.15.129 my192_N2
+Error response from daemon: network with name my192_N2 already exists
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.128/27 --gateway 192.168.15.129 my192_N3
+9316aae286c50bb7eea9622d7f495dbe9c2429e00725607a7ef7b2210fd8ba44
+u08@u08-VirtualBox:~$ docker network create -d bridge --subnet 192.168.15.160/28 --gateway 192.168.15.161 my192_N4
+b03eebb3162b5dfa0bb3393c213a11154452e0be9828f7a098887d38a5ca9f96
+u08@u08-VirtualBox:~$ docker network inspect bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "af1fe956c31939fbf2bfb18ce5c8000db8aaa41bf8788c3eb5acfb82afcf7b2f",
+        "Created": "2025-04-10T13:07:34.504350134+07:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+u08@u08-VirtualBox:~$ docker network inspect my_bridge
+[
+    {
+        "Name": "my_bridge",
+        "Id": "cae23568176fc101df58b1065bf1bd0298f805394846ac6af3afe9398dc4e568",
+        "Created": "2025-04-10T13:22:33.154757678+07:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "b5338cd79ce31f71bb0e8562386ddadcb5411645f945dc97b13acdcbfa176b2f": {
+                "Name": "cont1",
+                "EndpointID": "5b497291cca68c7aed6d317261d1d9089a0b7cdac1ec7f84f1aff3dda23b5069",
+                "MacAddress": "1e:15:04:11:3f:57",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
+u08@u08-VirtualBox:~$ docker run -int --net my_bridge --name cont2 --rm alpine
+unknown shorthand flag: 'n' in -nt
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run 'docker run --help' for more information
+u08@u08-VirtualBox:~$ docker run -itd --net my_bridge --name cont2 --rm alpine
+a3147defe48506fbd9aee5b37b68c25d32d929edbce8ee8336e33fc7664f9755
+u08@u08-VirtualBox:~$ docker exec cont2 ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0@if11: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue state UP 
+    link/ether 2a:03:82:ab:eb:04 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.3/16 brd 172.18.255.255 scope global eth0
+       valid_lft forever preferred_lft forever
+u08@u08-VirtualBox:~$ docker run -itd --net bridge --name cont1 --rm alpine
+docker: Error response from daemon: Conflict. The container name "/cont1" is already in use by container "b5338cd79ce31f71bb0e8562386ddadcb5411645f945dc97b13acdcbfa176b2f". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+u08@u08-VirtualBox:~$ docker run -itd --net bridge --name cont2 --rm alpine
+docker: Error response from daemon: Conflict. The container name "/cont2" is already in use by container "a3147defe48506fbd9aee5b37b68c25d32d929edbce8ee8336e33fc7664f9755". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+u08@u08-VirtualBox:~$ docker run -itd --net my_bridge --name cont2 --rm alpine
+docker: Error response from daemon: Conflict. The container name "/cont2" is already in use by container "a3147defe48506fbd9aee5b37b68c25d32d929edbce8ee8336e33fc7664f9755". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+u08@u08-VirtualBox:~$ docker run -itd --net my_bridge --name cont1 --rm alpine
+docker: Error response from daemon: Conflict. The container name "/cont1" is already in use by container "b5338cd79ce31f71bb0e8562386ddadcb5411645f945dc97b13acdcbfa176b2f". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+u08@u08-VirtualBox:~$ docker run -itd --net my_bridge --name cont3 --rm alpine
+1030aa0e3680df4a65bde5863008c3473d11d6e7000afd92e2624709d0e48996
+^[[A^[[u08@u08-VirtualBox:~$ docker run -itd --net bridge --name cont1 --rm alpine
+docker: Error response from daemon: Conflict. The container name "/cont1" is already in use by container "b5338cd79ce31f71bb0e8562386ddadcb5411645f945dc97b13acdcbfa176b2f". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+u08@u08-VirtualBox:~$ docker run -itd --net my_bridge --name cont4 --rm alpine
+dcb9747d36af53bad6e7222f38ddbe8b6ec01870ba01a64ad451d0eec4875d66
+u08@u08-VirtualBox:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND     CREATED              STATUS              PORTS     NAMES
+dcb9747d36af   alpine    "/bin/sh"   About a minute ago   Up 59 seconds                 cont4
+1030aa0e3680   alpine    "/bin/sh"   About a minute ago   Up About a minute             cont3
+a3147defe485   alpine    "/bin/sh"   5 minutes ago        Up 5 minutes                  cont2
+b5338cd79ce3   alpine    "/bin/sh"   56 minutes ago       Up 55 minutes                 cont1
